@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  background: #f2f4f7;
+  color: #17202a;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.app {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.header {
+  padding: 28px 20px 24px;
+  text-align: center;
+  color: #ffffff;
+  background: #17202a;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  opacity: 0.75;
+}
+
+main {
+  padding-bottom: 30px;
+}
+
+.balance-card {
+  margin: 20px;
+  padding: 25px 20px;
+  border-radius: 20px;
+  text-align: center;
+  background: #e8f7ed;
+}
+
+.label {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #555555;
+}
+
+.balance {
+  font-size: 30px;
+  font-weight: 800;
+  word-break: break-word;
+}
+
+.summary {
+  display: flex;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+.summary-card {
+  flex: 1;
+  min-width: 0;
+  padding: 18px;
+  border-radius: 16px;
+}
+
+.summary-card span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.summary-card strong {
+  display: block;
+  font-size: 17px;
+  word-break: break-word;
+}
+
+.income-card {
+  background: #e8f7ed;
+}
+
+.expense-card {
+  background: #fdecec;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+}
+
+.action-buttons button {
+  flex: 1;
+  min-height: 54px;
+  border: 0;
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.income-button {
+  background: #16a34a;
+}
+
+.expense-button {
+  background: #dc2626;
+}
+
+.income-button:active,
+.expense-button:active,
+.save-button:active,
+.cancel-button:active,
+.clear-button:active,
+.delete-button:active {
+  transform: scale(0.98);
+}
+
+.form-card {
+  margin: 0 20px 20px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 18px;
+  background: #fafafa;
+}
+
+.form-card h2 {
+  margin: 0 0 18px;
+  font-size: 21px;
+}
+
+.form-card label {
+  display: block;
+  margin: 14px 0 7px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.form-card input,
+.form-card select {
+  width: 100%;
+  min-height: 50px;
+  padding: 13px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 11px;
+  outline: none;
+  background: #ffffff;
+  font-size: 16px;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+  border-color: #2563eb;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  flex: 1;
+  min-height: 50px;
+  border: 0;
+  border-radius: 11px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.save-button {
+  color: #ffffff;
+  background: #2563eb;
+}
+
+.cancel-button {
+  color: #17202a;
+  background: #dddddd;
+}
+
+.operations {
+  padding: 0 20px;
+}
+
+.operations-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.operations-title h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.clear-button {
+  border: 0;
+  border-radius: 9px;
+  padding: 8px 10px;
+  color: #333333;
+  background: #eeeeee;
+  font-size: 12px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.transaction-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.transaction-info strong {
+  display: block;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.transaction-info small {
+  display: block;
+  margin-top: 4px;
+  color: #777777;
+  font-size: 13px;
+  word-break: break-word;
+}
+
+.transaction-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.transaction-right > strong {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.green {
+  color: #16a34a;
+}
+
+.red {
+  color: #dc2626;
+}
+
+.delete-button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  background: #f1f1f1;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.empty {
+  padding: 45px 10px;
+  text-align: center;
+  color: #888888;
+  font-size: 15px;
+}
+
+@media (max-width: 420px) {
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .balance {
+    font-size: 26px;
+  }
+
+  .summary-card {
+    padding: 15px 12px;
+  }
+
+  .summary-card strong {
+    font-size: 14px;
+  }
+
+  .transaction {
+    align-items: flex-start;
+  }
+
+  .transaction-right {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
